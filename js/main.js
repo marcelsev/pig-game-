@@ -21,6 +21,8 @@ let scorePlayer2= 0;
 let play= true;
 
 btnRoll.addEventListener("click", function(){
+    if(play === false) return;
+    
 const dice = Math.trunc(Math.random()*6+1);
 
 diceEl.src= `./images/dice${dice}.png`;
