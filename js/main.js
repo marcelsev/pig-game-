@@ -8,7 +8,7 @@ const currentScoreEl1= document.querySelector("#current--score--1");
 const currentScoreEl2= document.querySelector("#current--score--2");
 const player1El= document.querySelector("#player--1");
 const player2El= document.querySelector("#player--2");
-
+const btnList = document.querySelector("#btn--list");
 //initialitation
 
 diceEl.src = "";
@@ -19,10 +19,11 @@ let currentPlayer= 1;
 let scorePlayer1= 0;
 let scorePlayer2= 0;
 let play= true;
+let prenom = "";
 
 btnRoll.addEventListener("click", function(){
     if(play === false) return;
-    
+
 const dice = Math.trunc(Math.random()*6+1);
 
 diceEl.src= `./images/dice${dice}.png`;
@@ -69,6 +70,12 @@ const winner= (score)=>{
         currentScoreEl2.textContent= 0;
         diceEl.src= "";
         play= false;
+        //information winner
+        prenom = prompt("Félicitations champion! Comment tu t'appelles?");
+        
+       
+    
+
     }else {
         switchPlayer();
     }
@@ -81,3 +88,24 @@ currentScoreEl2.textContent=0;
 player1El.classList.toggle("active");
 player2El.classList.toggle("active");
 };
+
+btnNew.addEventListener("click", ()=>{
+    diceEl.src= "";
+    score1El.textContent=0;
+    score2El.textContent=0;
+    currentScore=0;
+    currentPlayer=1;
+    scorePlayer1=0;
+    scorePlayer2=0;
+    play=true;
+    player1El.classList.remove("winner");
+    player2El.classList.remove("winner");
+    player1El.classList.add("active");
+    player2El.classList.remove("active");
+});
+
+btnList.addEventListener("click" ,()=>{
+    alert(  )
+})
+
+

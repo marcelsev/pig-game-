@@ -110,4 +110,5 @@ h3{
 }
 .winner{
     background-color: black;
+    color: var(--btn-bg-color);
 }
