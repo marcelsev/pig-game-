@@ -1,0 +1,110 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300&display=swap');
+
+:root{
+    --bg-main-color : #457b9d;
+    --bg-sec-color: #1d3557;
+    --bg-third-color: #023e8a;
+    --btn-bg-color: #ffffffff;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+body{
+    background-color: var(--bg-third-color);
+    font-family: 'Josefin Sans', sans-serif;
+}
+.container{
+    width: 70%;
+    margin: 0 auto;
+}
+h2{
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+h3{
+    font-size: 30px;
+    font-weight: 400;
+}
+.game{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.player{
+    width: 50%;
+    height: 500px;
+    background-color: var(--bg-sec-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    justify-content: space-around;
+    text-transform: uppercase;
+}
+.player1{
+    border-radius: 10px 0 0 10px;
+}
+.player2{
+    border-radius: 0 10px 10px 0;
+}
+.active{
+    background-color: var(--bg-main-color);
+}
+.score{
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--bg-third-color);
+}
+.control{
+    height: 500px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+}
+.control button{
+    height: 35px;
+    width: 100%;
+    background: none;
+    border-radius: 50px;
+    background-color: var(--btn-bg-color);
+    border: none;
+    text-transform: uppercase;
+    box-shadow: rgb(220, 224, 228) 0px 20px 30px -10px;
+}
+.control button:hover{
+    background-color: var(--bg-main-color);
+}
+.control button:active{
+    transform: translateY(-4px);
+    box-shadow: rgb(212, 219, 226) 0px 10px 15px -10px;;
+}
+.dice{
+    width: 100px;
+}
+.current{
+    width: 200px;
+    height: 120px;
+    border-radius: 6px;
+    background-color: var(--bg-third-color);
+    color: var(--btn-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.current-score{
+    font-size: 30px;
+    font-weight: 700;
+}
